@@ -17,6 +17,7 @@
               <th>Nota</th>
               <th>Fecha Ingreso</th>
               <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody class="table-group-divider" id="contenido">
@@ -37,16 +38,16 @@
               <td
                 v-text="new Date(est.updated_at).toLocaleDateString('en-US')"
               ></td>
-              <td>
+              <td colspan="2">
                 <router-link
-                  :to="{ path: 'view/' + est.id }"
+                  :to="{ path: '/viewE/' + est.id }"
                   class="btn btn-info"
                 >
                   <i class="fa-solid fa-eye"></i>
                 </router-link>
                 &nbsp;
                 <router-link
-                  :to="{ path: 'edit/' + est.id }"
+                  :to="{ path: '/editE/' + est.id }"
                   class="btn btn-warning"
                 >
                   <i class="fa-solid fa-edit"></i>
