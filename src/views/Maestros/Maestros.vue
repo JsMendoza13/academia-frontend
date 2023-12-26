@@ -24,7 +24,7 @@
             <tr v-if="this.cargando">
               <td colspan="9"><span>Cargando...</span></td>
             </tr>
-            <tr v-else v-for="(est, i) in this.estudiantes" :key="est.id">
+            <tr v-else v-for="(est, i) in this.maestros" :key="est.id">
               <td v-text="i + 1"></td>
               <td v-text="est.id"></td>
               <td v-text="est.nombres"></td>
@@ -73,18 +73,18 @@ import { confirmar } from "../../funciones";
 export default {
   data() {
     return {
-      estudiantes: null,
+      maestros: null,
       cargando: true,
     };
   },
   mounted() {
-    this.getEstudiantes();
+    this.getMaestros();
   },
   methods: {
-    getEstudiantes() {
+    getMaestros() {
       this.cargando = true;
       axios.get("http://projectacademia.test/api/v1/maestros").then((res) => {
-        this.estudiantes = res.data;
+        this.maestros = res.data;
         this.cargando = false;
       });
     },
