@@ -160,9 +160,13 @@
 <script>
 import { mostrarAlerta, enviarSolicitud } from "../../funciones";
 import { useRoute } from "vue-router";
+import { mapGetters } from "vuex";
 import axios from "axios";
 
 export default {
+  computed: {
+    ...mapGetters(["apiUrl"]),
+  },
   data() {
     return {
       id: 0,
@@ -180,7 +184,7 @@ export default {
   mounted() {
     const route = useRoute();
     this.id = route.params.id;
-    this.url = "http://projectacademia.test/api/v1/estudiantes/" + this.id;
+    this.url = this.apiUrl + "/estudiantes/" + this.id;
 
     this.getEstudiante();
   },
@@ -212,7 +216,7 @@ export default {
         mostrarAlerta("Ingresa un telefono. ", "warning", "telefono");
       } else if (this.credito < 7 || "") {
         mostrarAlerta(
-          "Debes ingresar tu creditos, No pueden ser menor a 7. ",
+          "Debes ingresar tus creditos, No pueden ser menor a 7. ",
           "warning",
           "credito"
         );
