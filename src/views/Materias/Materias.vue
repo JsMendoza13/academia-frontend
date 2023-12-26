@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <div class="card-header bg-dark text-white text-center rounded">
-        Lista de Maestros
+        Lista de Materias
       </div>
       <div class="table-responsive">
         <table class="table table-bordered table-hover">

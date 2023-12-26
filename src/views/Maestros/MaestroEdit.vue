@@ -150,10 +150,10 @@ export default {
     this.id = route.params.id;
     this.url = "http://projectacademia.test/api/v1/maestros/" + this.id;
 
-    this.getEstudiante();
+    this.getMaestro();
   },
   methods: {
-    getEstudiante() {
+    getMaestro() {
       axios.get(this.url).then((res) => {
         this.id = res.data.data.id;
         this.nombres = res.data.data.nombres;
