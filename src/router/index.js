@@ -48,7 +48,7 @@ const routes = [
     component: Maestros,
   },
   {
-    path: "/editMaestro",
+    path: "/editMaestro/:id",
     name: "editarMaestro",
     component: MaestroEdit,
   },
@@ -58,7 +58,7 @@ const routes = [
     component: MaestroNew,
   },
   {
-    path: "/viewMaestro",
+    path: "/viewMaestro/:id",
     name: "viewMaestro",
     component: MaestroView,
   },
@@ -73,12 +73,12 @@ const routes = [
     component: MateriaNew,
   },
   {
-    path: "/editMate",
+    path: "/editMate/:id",
     name: "editarMate",
     component: MateriaEdit,
   },
   {
-    path: "/viewMate",
+    path: "/viewMate/:id",
     name: "viewMate",
     component: MateriaView,
   },

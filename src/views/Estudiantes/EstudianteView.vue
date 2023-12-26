@@ -2,7 +2,7 @@
   <div class="row mt-3">
     <div class="col-md-6 offset-md-3">
       <div class="card-header bg-dark text-white text-center rounded p-2">
-        Descripción del estudiante
+        Descripción <span v-text="nombres + ' ' + apellidos"></span>
       </div>
       <div class="card-body">
         <div class="d-grid col-6 mx-auto mt-3">

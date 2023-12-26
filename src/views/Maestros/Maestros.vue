@@ -1,6 +1,9 @@
 <template>
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
+      <div class="card-header bg-dark text-white text-center rounded">
+        Lista de Maestros
+      </div>
       <div class="table-responsive">
         <table class="table table-bordered table-hover">
           <thead>
@@ -35,14 +38,14 @@
               ></td>
               <td>
                 <router-link
-                  :to="{ path: 'view/' + est.id }"
+                  :to="{ path: '/viewMaestro/' + est.id }"
                   class="btn btn-info"
                 >
                   <i class="fa-solid fa-eye"></i>
                 </router-link>
                 &nbsp;
                 <router-link
-                  :to="{ path: 'edit/' + est.id }"
+                  :to="{ path: 'editMaestro/' + est.id }"
                   class="btn btn-warning"
                 >
                   <i class="fa-solid fa-edit"></i>
@@ -87,7 +90,7 @@ export default {
     },
     eliminar(id, nombres) {
       confirmar(
-        "http://projectacademia.test/api/v1/maestros",
+        "http://projectacademia.test/api/v1/maestros/",
         id,
         "Eliminar registro",
         "Realmente desea eliminar a " + nombres + " ?"

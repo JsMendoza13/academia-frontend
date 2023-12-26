@@ -46,7 +46,7 @@ export function enviarSolicitud(metodo, parametros, url, mensaje) {
       if (estado == 200) {
         mostrarAlerta(mensaje, "success");
         window.setTimeout(function () {
-          window.location.href = "/";
+          window.location.reload();
         }, 1000);
       } else {
         mostrarAlerta("Error al borrar. ", "error");

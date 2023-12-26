@@ -1,8 +1,8 @@
 <template>
   <div class="row mt-3">
     <div class="col-md-6 offset-md-3">
-      <div class="card-header bg-dark text-white text-center">
-        Descripción de los maestros
+      <div class="card-header bg-dark text-white text-center p-2 rounded">
+        Descripción de <span v-text="nombres + ' ' + apellidos"></span>
       </div>
       <div class="card-body">
         <div class="d-grid col-6 mx-auto mt-3">
@@ -73,7 +73,7 @@ export default {
         this.id = res.data.data.id;
         this.nombres = res.data.data.nombres;
         this.apellidos = res.data.data.apellidos;
-        this.email = res.data.data.telefono;
+        this.email = res.data.data.email;
         this.telefono = res.data.data.telefono;
         this.direccion = res.data.data.direccion;
         this.ciudad = res.data.data.ciudad;
