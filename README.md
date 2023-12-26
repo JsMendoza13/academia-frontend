@@ -1,4 +1,4 @@
-> [!WARNING]
+> [!IMPORTANT]
 > Proyecto incompleto!! 
 # Parte Front-end del proyecto academico.
 
