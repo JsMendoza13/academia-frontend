@@ -1,4 +1,6 @@
-# frontproject
+> [!WARNING]
+> Proyecto incompleto!! 
+# Parte Front-end del proyecto academico.
 
 ## Project setup
 ```
@@ -15,5 +17,9 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### INFORMACION
+-Este proyecto es la parte front-end creada en Vue.js y su parte [Back-end](https://github.com/JsMendoza13/academia-backend) <- es esta 
+> [!NOTE]
+>Problemas con dependencias que se generaron, por el momento el proyecto se encuentra separado.
+>
+> Solo se ha creado un CRUD, aún se le continuarán anexando modificaciones al proyecto.  
