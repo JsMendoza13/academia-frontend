@@ -121,21 +121,6 @@
             ></span>
             <input
               type="text"
-              v-model="credito"
-              id="nombres"
-              placeholder="Ingrese sus creditos."
-              required
-              maxlength="3"
-              class="form-control"
-            />
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text"
-              ><i class="fa-solid fa-user"></i
-            ></span>
-            <input
-              type="text"
               v-model="nota"
               id="nombres"
               placeholder="Ingrese su nota. "
@@ -170,7 +155,6 @@ export default {
       direccion: "",
       ciudad: "",
       semestre: "",
-      credito: "",
       nota: "",
       cargando: true,
     };
@@ -189,12 +173,6 @@ export default {
         mostrarAlerta("Ingresa tus apellidos. ", "warning", "apellidos");
       } else if (this.telefono.trim() === "") {
         mostrarAlerta("Ingresa un telefono. ", "warning", "telefono");
-      } else if (this.credito.trim() < 7 || "") {
-        mostrarAlerta(
-          "Debes ingresar tu creditos, No pueden ser menor a 7. ",
-          "warning",
-          "credito"
-        );
       } else {
         var parametros = {
           id: this.id.trim(),
@@ -204,7 +182,6 @@ export default {
           direccion: this.direccion.trim(),
           ciudad: this.ciudad.trim(),
           semestre: this.semestre.trim(),
-          credito: this.credito.trim(),
           nota: this.nota.trim(),
         };
         enviarSolicitud(

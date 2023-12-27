@@ -16,7 +16,6 @@
               <th>Dirección</th>
               <th>Ciudad</th>
               <th>Semestre</th>
-              <th>Crédito</th>
               <th>Nota</th>
               <th>Fecha Ingreso</th>
               <th></th>
@@ -35,7 +34,6 @@
               <td v-text="est.direccion"></td>
               <td v-text="est.ciudad"></td>
               <td v-text="est.semestre"></td>
-              <td v-text="est.credito"></td>
               <td v-text="est.nota"></td>
               <td
                 v-text="new Date(est.updated_at).toLocaleDateString('en-US')"

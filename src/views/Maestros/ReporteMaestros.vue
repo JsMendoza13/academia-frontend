@@ -1,9 +1,12 @@
 <template>
   <div class="row">
     <div class="mt-3 col-lg-8 offset-lg-2">
+      <div class="card-header bg-dark text-white text-center rounded mb-2 p-2">
+        Reporte de Maestros
+      </div>
       <div class="table-reponsive">
         <DataTable
-          :data="materias"
+          :data="maestros"
           :columns="columns"
           class="table table-striped table-bordered display rounded"
           :options="{
@@ -27,10 +30,14 @@
         >
           <thead>
             <tr>
+              <th>#</th>
               <th>ID</th>
-              <th>Nombres Profesor</th>
-              <th>Apellidos Profesor</th>
-              <th>Nombres Estudiante</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Dirección</th>
+              <th>Ciudad</th>
             </tr>
           </thead>
         </DataTable>
@@ -59,7 +66,7 @@ export default {
   components: { DataTable },
   data() {
     return {
-      materias: null,
+      maestros: null,
       columns: [
         {
           data: null,
@@ -67,9 +74,13 @@ export default {
             return `${meta.row + 1}`;
           },
         },
-        { data: "nombre" },
-        { data: "descripcion" },
-        { data: "credito" },
+        { data: "id" },
+        { data: "nombres" },
+        { data: "apellidos" },
+        { data: "email" },
+        { data: "telefono" },
+        { data: "direccion" },
+        { data: "ciudad" },
       ],
       botones: [
         {
@@ -100,13 +111,13 @@ export default {
     };
   },
   mounted() {
-    this.getMaterias();
+    this.getMaestros();
   },
   methods: {
-    getMaterias() {
+    getMaestros() {
       axios
-        .get("http://projectacademia.test/api/v1/materias")
-        .then((response) => (this.materias = response.data));
+        .get("http://projectacademia.test/api/v1/maestros")
+        .then((response) => (this.maestros = response.data));
     },
   },
 };

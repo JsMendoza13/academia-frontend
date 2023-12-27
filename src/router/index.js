@@ -1,28 +1,28 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 /*Route Estudiantes*/
 import EstudianteEdit from "../views/Estudiantes/EstudianteEdit.vue";
 import EstudianteNuevo from "../views/Estudiantes/EstudianteNuevo.vue";
 import EstudianteView from "../views/Estudiantes/EstudianteView.vue";
 import Estudiantes from "../views/Estudiantes/Estudiantes.vue";
+import ReporteEstudiante from "../views/Estudiantes/ReporteEstudiante.vue";
 /*Route Maestros*/
 import Maestros from "../views/Maestros/Maestros.vue";
 import MaestroEdit from "../views/Maestros/MaestroEdit.vue";
 import MaestroNew from "../views/Maestros/MaestroNew.vue";
 import MaestroView from "../views/Maestros/MaestroView.vue";
+import ReporteMaestros from "../views/Maestros/ReporteMaestros.vue";
 /*Route Materias*/
 import Materias from "../views/Materias/Materias.vue";
 import MateriaView from "../views/Materias/MateriaView.vue";
 import MateriaEdit from "../views/Materias/MateriaEdit.vue";
 import MateriaNew from "../views/Materias/MateriaNew.vue";
-/*Reporte*/
-import ReporteView from "../views/ReporteView.vue";
+import ReporteMate from "../views/Materias/ReporteMate.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/reporteEstudiante",
     name: "home",
-    component: HomeView,
+    component: ReporteEstudiante,
   },
   {
     path: "/estudiantes",
@@ -45,6 +45,11 @@ const routes = [
     component: EstudianteView,
   },
   {
+    path: "/reporteEstudiante",
+    name: "reporteEstudiante",
+    component: ReporteEstudiante,
+  },
+  {
     path: "/maestros",
     name: "maestros",
     component: Maestros,
@@ -63,6 +68,11 @@ const routes = [
     path: "/viewMaestro/:id",
     name: "viewMaestro",
     component: MaestroView,
+  },
+  {
+    path: "/reporteMaestro",
+    name: "reporteMaestro",
+    component: ReporteMaestros,
   },
   {
     path: "/materias",
@@ -85,9 +95,9 @@ const routes = [
     component: MateriaView,
   },
   {
-    path: "/reporte",
-    name: "reporte",
-    component: ReporteView,
+    path: "/reporteMate",
+    name: "reporteMate",
+    component: ReporteMate,
   },
 ];
 
