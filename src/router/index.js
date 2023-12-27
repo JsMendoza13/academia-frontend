@@ -15,6 +15,8 @@ import Materias from "../views/Materias/Materias.vue";
 import MateriaView from "../views/Materias/MateriaView.vue";
 import MateriaEdit from "../views/Materias/MateriaEdit.vue";
 import MateriaNew from "../views/Materias/MateriaNew.vue";
+/*Reporte*/
+import ReporteView from "../views/ReporteView.vue";
 
 const routes = [
   {
@@ -81,6 +83,11 @@ const routes = [
     path: "/viewMate/:id",
     name: "viewMate",
     component: MateriaView,
+  },
+  {
+    path: "/reporte",
+    name: "reporte",
+    component: ReporteView,
   },
 ];
 
