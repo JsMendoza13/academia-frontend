@@ -17,12 +17,14 @@ import MateriaView from "../views/Materias/MateriaView.vue";
 import MateriaEdit from "../views/Materias/MateriaEdit.vue";
 import MateriaNew from "../views/Materias/MateriaNew.vue";
 import ReporteMate from "../views/Materias/ReporteMate.vue";
+/*Home*/
+import HelloWorld from "../components/HelloWorld.vue";
 
 const routes = [
   {
-    path: "/reporteEstudiante",
+    path: "/",
     name: "home",
-    component: ReporteEstudiante,
+    component: HelloWorld,
   },
   {
     path: "/estudiantes",
